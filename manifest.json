@@ -2,8 +2,8 @@
   "name": "MessaSpace - Plateforme de Messagerie",
   "short_name": "MessaSpace",
   "description": "Plateforme de messagerie permettant à un administrateur d'inviter jusqu'à 24 999 contacts, d'envoyer des messages à tous et de recevoir leurs réponses en temps réel.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/messaspace-pwa/",
+  "scope": "/messaspace-pwa/",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#0f0f1a",
@@ -78,7 +78,7 @@
       "name": "Ouvrir MessaSpace",
       "short_name": "Accueil",
       "description": "Accéder à la plateforme de messagerie",
-      "url": "/",
+      "url": "/messaspace-pwa/",
       "icons": [
         {
           "src": "icons/icon-192x192.png",

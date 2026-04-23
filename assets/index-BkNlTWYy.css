@@ -8,3 +8,139 @@ input[type="file"].hidden { position: fixed !important; top: -9999px !important;
 /* Improve tap targets on mobile */
 button { min-height: 44px; }
 .cyber-btn-cyan, .cyber-btn-pink { min-height: 40px; }
+
+
+/* ===== MESSASPACE MOBILE FIXES ===== */
+
+/* Bouton TOUT SUPPRIMER */
+.cyber-btn-red {
+  background: rgba(220,38,38,0.15) !important;
+  border: 1px solid rgba(220,38,38,0.5) !important;
+  color: #f87171 !important;
+  padding: 6px 12px !important;
+  border-radius: 2px !important;
+  cursor: pointer !important;
+  font-size: 11px !important;
+  font-family: monospace !important;
+  letter-spacing: 0.1em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  min-height: 36px !important;
+  transition: all 0.2s !important;
+}
+.cyber-btn-red:hover {
+  background: rgba(220,38,38,0.3) !important;
+  border-color: rgba(220,38,38,0.8) !important;
+}
+
+/* Améliorer les zones de tap sur mobile */
+button, a, [role="button"] {
+  min-height: 36px;
+  cursor: pointer;
+}
+
+/* Sidebar labels visibles */
+nav a span, .bg-sidebar a {
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Input file accessible */
+input[type="file"]#csv-file-input {
+  position: fixed !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  opacity: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+}
+
+/* Améliorer la lisibilité sur mobile */
+@media (max-width: 768px) {
+  .hud-box { padding: 12px !important; }
+  table { font-size: 11px !important; }
+  .font-mono { font-size: 11px !important; }
+  
+  /* Sidebar plus large sur mobile */
+  .bg-sidebar {
+    min-width: 140px !important;
+  }
+}
+
+/* Boutons d'action dans la table contacts */
+.p-1\.5.text-muted-foreground {
+  min-width: 32px !important;
+  min-height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Animation fluide pour les transitions */
+* {
+  -webkit-tap-highlight-color: rgba(168, 85, 247, 0.2);
+}
+
+/* Scroll fluide */
+html, body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Formulaires sur mobile */
+input, textarea, select {
+  font-size: 16px !important; /* Évite le zoom auto sur iOS */
+}
+
+
+/* ===== CORRECTIONS FINALES MESSASPACE ===== */
+
+/* Sidebar labels toujours visibles */
+.bg-sidebar .font-mono {
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+/* Sidebar largeur minimum */
+.bg-sidebar {
+  min-width: 140px !important;
+}
+
+/* Boutons de la table contacts plus grands sur mobile */
+@media (max-width: 640px) {
+  td button {
+    padding: 8px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+  }
+  
+  /* Réduire la taille du texte dans la table */
+  .font-mono.text-sm {
+    font-size: 10px !important;
+  }
+  
+  /* Pagination plus visible */
+  .pagination, [class*="pagination"] {
+    font-size: 12px !important;
+    padding: 8px !important;
+  }
+}
+
+/* Améliorer le contraste des boutons */
+.cyber-btn-cyan:active,
+.cyber-btn-pink:active,
+.cyber-btn-red:active {
+  opacity: 0.8 !important;
+  transform: scale(0.98) !important;
+}
+
+/* Zone de tap minimum 44px (standard Apple HIG) */
+.p-1\.5 {
+  padding: 8px !important;
+}
+
+/* Améliorer la visibilité du bouton TOUT SUPPRIMER */
+button[style*="rgba(220,38,38"] {
+  font-weight: bold !important;
+}
